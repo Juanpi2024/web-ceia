@@ -1,0 +1,64 @@
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.history-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.history-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.history-image:hover img {
+    transform: scale(1.05);
+}
+
+.history-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.history-badge span {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.history-badge strong {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.lead-text {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.history-content p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+@media (min-width: 768px) {
+    .history-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
